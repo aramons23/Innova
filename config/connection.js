@@ -6,10 +6,10 @@ dotenv.config({ path: './.env' });
 
 // Configuración de la conexión a MySQL
 const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "root2310",
-    database: "InnovaDB",
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
     waitForConnections: true,
     connectionLimit: 10,
 });
